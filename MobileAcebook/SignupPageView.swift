@@ -22,7 +22,6 @@ struct SignupPageView: View {
 
   @State private var customImageUploaded: Bool = false
   @State private var navigateToLoginPage: Bool = false
-  @State private var navigateToFeedPage: Bool = false
   @State private var showErrMessage: Bool = false
   @State private var showSignupBtn: Bool = true
 
@@ -101,20 +100,19 @@ struct SignupPageView: View {
                           canSignUp, errorMessage in if canSignUp {
                               navigateToLoginPage = true
                               
-                              NavigationLink(destination: LoginPageView()) { EmptyView()}
-                              
                           } else {
                               if let errorMessage = errorMessage {
                                   errMessage = errorMessage
                                   showErrMessage = true
                                   showSignupBtn = false
+                                  navigateToLoginPage = false
                               }
                               
                           }
                       }
                   }
               }
-          }
+          }.background(NavigationLink(destination: LoginPageView(), isActive: $navigateToLoginPage) { EmptyView()})
         }
       }
   }
