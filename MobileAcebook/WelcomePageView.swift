@@ -18,16 +18,16 @@ struct WelcomePageView: View {
                     
                     Text("Welcome to Acebook!")
                         .font(.largeTitle)
-                        .padding(.bottom, 20)
+                        .padding()
                         .accessibilityIdentifier("welcomeText")
                     
                     Spacer()
                     
-                    Image(systemName: "network")
+                    Image("image (1)")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 200, height: 200)
-                        .accessibilityIdentifier("network-logo")
+    
                     
                     Spacer()
                     
