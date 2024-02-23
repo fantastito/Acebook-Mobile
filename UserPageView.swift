@@ -20,9 +20,15 @@ struct UserPageView: View {
 
     var body: some View {
             VStack {
+                Text("User Page")
+                    .font(.title3)
+                    .padding()
+                
                 if let error = userPageViewModel.errorMessage {
                     Text(error)
                 }
+                
+                Spacer()
                 
                 HStack {
                     if let avatar = userPageViewModel.user?.avatar {
@@ -34,8 +40,11 @@ struct UserPageView: View {
                     }
 
                 }
+                .padding()
                 
                 Text("Under development")
+                
+                Spacer()
                 /*
                 VStack {
                     if let currentUser = currentUser {
@@ -47,10 +56,8 @@ struct UserPageView: View {
                 }
                  */
                 
-                
-
-                Spacer ()
             }
+            .padding()
             .onAppear {
                 userPageViewModel.getUser()
                 /*

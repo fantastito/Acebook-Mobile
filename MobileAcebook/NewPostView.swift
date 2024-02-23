@@ -10,6 +10,7 @@ struct NewPostView: View {
     var body: some View {
         
             VStack(alignment: .leading) {
+
                 TextField("What do you want to say...", text: $postMessage)
 //                   
                     .padding()
@@ -19,7 +20,7 @@ struct NewPostView: View {
                     submitPost()
                     shouldNavToHomePage = true
                 }
-                .background(NavigationLink(destination: HomePageView(), isActive: $shouldNavToHomePage) {
+                .background(NavigationLink(destination: HomePageTestView(), isActive: $shouldNavToHomePage) {
                     EmptyView()
                 })
                 
