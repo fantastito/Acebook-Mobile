@@ -4,6 +4,7 @@ struct NewPostView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var postMessage = ""
     @State private var showPostSuccesfulText = false
+    @State private var shouldNavToHomePage = false
     
 
     var body: some View {
@@ -16,7 +17,11 @@ struct NewPostView: View {
 
                 Button("Submit") {
                     submitPost()
+                    shouldNavToHomePage = true
                 }
+                .background(NavigationLink(destination: HomePageView(), isActive: $shouldNavToHomePage) {
+                    EmptyView()
+                })
                 
                 .padding()
                 
