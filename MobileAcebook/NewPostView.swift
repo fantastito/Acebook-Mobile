@@ -1,20 +1,50 @@
 import SwiftUI
+import PhotosUI
+import Cloudinary
 
 struct NewPostView: View {
     @Environment(\.presentationMode) var presentationMode
+    @StateObject var imagePicker = ImagePicker()
     @State private var postMessage = ""
+    @State private var uploadedPostPublicId: String?
     @State private var showPostSuccesfulText = false
     @State private var shouldNavToHomePage = false
     
-
+    let cloudinary = CLDCloudinary(configuration: CloudinaryConfig.configuration)
+    
     var body: some View {
         
-            VStack(alignment: .leading) {
+            VStack(alignment: .center) {
 
                 TextField("What do you want to say...", text: $postMessage)
-//                   
                     .padding()
+                    .multilineTextAlignment(.center)
                     .navigationTitle("New post")
+                
+                if let uploadedPostPublicId = uploadedPostPublicId {
+                    cloudinaryImageView(cloudinary: cloudinary, imagePath: uploadedPostPublicId)
+                        .frame(maxHeight: 200) // Adjust height as needed
+                        .scaledToFit()
+                            }
+                
+                
+                PhotosPicker(selection: $imagePicker.imageSelection) {
+                    Text("Upload a photo")
+                }
+                .onChange(of: imagePicker.imageData) { imageData in
+                    // This block is executed when image data is set in the ImagePicker
+                    // You can update the uploadedImagePublicId here
+                    if let imageData = imageData {
+                        imagePicker.uploadToCloudinary(data: imageData) { imagePublicId in
+                            if let imagePublicId = imagePublicId {
+                                uploadedPostPublicId = imagePublicId
+                            } else { /*look here later*/
+                                print("Error: Image upload failed.")
+                            }
+                        }
+                    }
+                }
+
 
                 Button("Submit") {
                     submitPost()
@@ -49,10 +79,14 @@ struct NewPostView: View {
         }
 
         let postEndpoint = "http://127.0.0.1:8080/posts"
-        let postData = [
+        var postData = [
             "message": postMessage
             // userID?
         ]
+        
+        if let uploadedPostPublicId = uploadedPostPublicId {
+                postData["publicID"] = uploadedPostPublicId
+            }
 
         guard let url = URL(string: postEndpoint) else {
             print("Invalid URL")
