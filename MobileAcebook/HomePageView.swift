@@ -4,6 +4,7 @@ import Cloudinary
 struct HomePageView: View {
     @StateObject var authService = AuthenticationService.shared
     @StateObject var logoutViewModel = LogoutViewModel()
+    @StateObject var getUserModel = GetUserModel()
     @ObservedObject var viewModel = PostsViewModel()
     @StateObject var userPageViewModel = UserPageViewModel()
     @State private var isLoggingOut = false
@@ -20,6 +21,7 @@ struct HomePageView: View {
                     VStack(alignment: .leading) {
                     List(viewModel.posts) { post in
                         HStack {
+                            
                             Image(systemName: "person.circle.fill")
                                 .resizable()
                                 .frame(width: 40, height: 40)
@@ -46,7 +48,7 @@ struct HomePageView: View {
                             
                             if let postImagePath = post.image {
                                 
-                                cloudinaryImageView(cloudinary: cloudinary, imagePath: "acebook-mobile/\(postImagePath)")
+                                cloudinaryImageView(cloudinary: cloudinary, imagePath: postImagePath)
                                     .aspectRatio(contentMode: .fit)
                                     .scaledToFit()
 
@@ -92,6 +94,7 @@ struct HomePageView: View {
     }
     
 }
+
 
 
 

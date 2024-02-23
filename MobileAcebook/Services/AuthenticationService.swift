@@ -74,10 +74,11 @@ class AuthenticationService: ObservableObject, AuthenticationServiceProtocol {
     }
     
     func isUsernameValid(_ username: String) -> Bool {
-        if username != "" {
-            return true
-        } else {
+        let trimmedUsername = username.trimmingCharacters(in: .whitespacesAndNewlines)
+        if trimmedUsername.isEmpty {
             return false
+        } else {
+            return true
         }
     }
     
