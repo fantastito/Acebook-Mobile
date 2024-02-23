@@ -4,45 +4,29 @@ import Cloudinary
 struct HomePageView: View {
     @StateObject var authService = AuthenticationService.shared
     @StateObject var logoutViewModel = LogoutViewModel()
+    @StateObject var getUserModel = GetUserModel()
     @ObservedObject var viewModel = PostsViewModel()
+    @StateObject var userPageViewModel = UserPageViewModel()
     @State private var isLoggingOut = false
     @State private var selectedTab = "Home"
     let cloudinary = CLDCloudinary(configuration: CloudinaryConfig.configuration)
     
     
     var body: some View {
-        TabView(selection: $selectedTab) {
-            NavigationView {
                 VStack {
+                    if let username = userPageViewModel.user?.username {
+                        Text("Hello \(username)!")
+                            .font(.title3)
+                    }
+                    VStack(alignment: .leading) {
                     List(viewModel.posts) { post in
-                        VStack(alignment: .leading) {
-                            HStack {
-                                
-                                Image(systemName: "person.circle.fill")
-                                    .resizable()
-                                    .frame(width: 40, height: 40)
-                                    .foregroundColor(.blue)
-                                    .padding(.trailing, 8)
-                                
-                                if let message = post.message {
-                                    Text(message)
-                                        .font(.subheadline)
-                                } else {
-                                    Text("No message available")
-                                        .font(.subheadline)
-                                        .foregroundColor(.gray)
-                                }
-                                
-                                if let postImagePath = post.image {
-                                    
-                                    cloudinaryImageView(cloudinary: cloudinary, imagePath: "acebook-mobile/\(postImagePath)")
-                                        .aspectRatio(contentMode: .fit)
-                                        .scaledToFit()
-                                    
-                                    
-                                }
-                            }
+                        HStack {
                             
+                            Image(systemName: "person.circle.fill")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .foregroundColor(.blue)
+                                .padding(.trailing, 8)
                             
                             if let createdBy = post.createdBy {
                                 Text("Posted by: \(createdBy)")
@@ -50,45 +34,55 @@ struct HomePageView: View {
                                     .foregroundColor(.blue)
                             }
                             
-                            HStack {
+                        }
                                 
-                                Button(action: {
-                                    
-                                }) {
-                                    Image(systemName: "heart")
-                                        .foregroundColor(.red)
-                                        .imageScale(.small)
-                                }
-                                .padding(.trailing, 8)
-                                Button(action: {
-                                    
-                                }) {
-                                    Label("Comments", systemImage: "bubble.left")
-                                        .font(.caption)
-                                }
-                                .foregroundColor(.blue)
-                                .padding(.trailing, 16)
-                                
-                                
+                        VStack {
+                            if let message = post.message {
+                                Text(message)
+                                    .font(.subheadline)
+                            } else {
+                                Text("No message available")
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
                             }
-                            .padding(.top, 8)
-                            .padding(.bottom, 8)
-                            .background(Color.gray.opacity(0.1))
-                            .cornerRadius(8)
                             
-                            HStack {
+                            if let postImagePath = post.image {
                                 
+                                cloudinaryImageView(cloudinary: cloudinary, imagePath: postImagePath)
+                                    .aspectRatio(contentMode: .fit)
+                                    .scaledToFit()
+
                             }
+                            
+                        }
+                            
+                        HStack(spacing: 80) {
+                        
+                            Button(action: {}) {
+                                Image(systemName: "heart")
+                                    .foregroundColor(.red)
+                                    .imageScale(.small)
+                            }
+                            .padding(.horizontal, 16.0)
+                            
+                            Button(action: {}) {
+                                Label("Comments", systemImage: "bubble.left")
+                                    .font(.caption)
+                            }
+                            .foregroundColor(.blue)
+                            .padding(.trailing, 16)
+                            
+                            
+                        }
+                        .padding(.top, 8)
+                        .padding(.bottom, 8)
+                        .background(Color.gray.opacity(0.1))
+                        .cornerRadius(8)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                    
                         }
                         .padding()
                     }
-                    
-                    .padding()
-                    //                            Button {
-                    //                                logoutViewModel.signOut()
-                    //                            } label: {
-                    //                                Text("Log out")
-                    //                            }
                 }
                 .navigationBarTitle("Home Page")
                 .navigationBarTitleDisplayMode(.inline) // Center the title
@@ -97,42 +91,10 @@ struct HomePageView: View {
                     viewModel.fetchPosts()
                     
                 }
-            }
-            .tabItem {
-                Label("Home", systemImage: "house.fill")
-            }
-            NavigationView {
-                UserPageView()
-            }
-            .tabItem {
-                Image(systemName: "person.fill")
-                Text("User")
-            }
-            NavigationView {
-                NewPostView()
-            }
-            .tabItem {
-                Label("New Post", systemImage: "pencil.line")
-            }
-            
-            Text("Logout")
-                .tag("Logout")
-                .tabItem {
-                    Label("Logout", systemImage: "person.fill.xmark")
-                }
-            
-        }
-        .navigationBarBackButtonHidden(true)
-        .onChange(of: selectedTab) { newValue in
-            if newValue == "Logout" {
-                logoutViewModel.signOut()
-                isLoggingOut = true
-            }
-        }
-        .background(NavigationLink(destination: WelcomePageView(), isActive: $isLoggingOut){ EmptyView() })
     }
     
 }
+
 
 
 

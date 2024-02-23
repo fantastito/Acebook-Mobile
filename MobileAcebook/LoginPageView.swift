@@ -31,7 +31,7 @@ struct LoginPageView: View {
                     
                 }
                 .disabled(loginViewModel.isLoggingIn)
-                .background(NavigationLink(destination: HomePageView(), isActive: .constant(loginViewModel.successMessage != nil)) {
+                .background(NavigationLink(destination: HomePageTestView(), isActive: .constant(loginViewModel.successMessage != nil)) {
                         EmptyView()
                     })
                 
