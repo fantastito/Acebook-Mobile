@@ -23,7 +23,7 @@ struct WelcomePageView: View {
                     
                     Spacer()
                     
-                    Image("image (1)")
+                    Image("makers-logo")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 200, height: 200)

@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		13CC078C2B84F3A70079987A /* CreateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CC078B2B84F3A70079987A /* CreateUserViewModel.swift */; };
 		13CC078E2B84F4A50079987A /* SignupPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CC078D2B84F4A50079987A /* SignupPageView.swift */; };
+		5C722B522B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.20.15.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C722B4C2B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.20.15.png */; };
+		5C722B532B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.21.47.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C722B4D2B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.21.47.png */; };
+		5C722B542B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.24.20.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C722B4E2B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.24.20.png */; };
+		5C722B552B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.22.12.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C722B4F2B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.22.12.png */; };
+		5C722B562B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.22.42.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C722B502B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.22.42.png */; };
+		5C722B572B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.24.43.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C722B512B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.24.43.png */; };
 		AE5D85B02AC8A221009680C6 /* MobileAcebookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D85AF2AC8A221009680C6 /* MobileAcebookApp.swift */; };
 		AE5D85B42AC8A224009680C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE5D85B32AC8A224009680C6 /* Assets.xcassets */; };
 		AE5D85B72AC8A224009680C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE5D85B62AC8A224009680C6 /* Preview Assets.xcassets */; };
@@ -62,6 +68,12 @@
 /* Begin PBXFileReference section */
 		13CC078B2B84F3A70079987A /* CreateUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewModel.swift; sourceTree = "<group>"; };
 		13CC078D2B84F4A50079987A /* SignupPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPageView.swift; sourceTree = "<group>"; };
+		5C722B4C2B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.20.15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.20.15.png"; path = "../../../../../Desktop/Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.20.15.png"; sourceTree = "<group>"; };
+		5C722B4D2B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.21.47.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.21.47.png"; path = "../../../../../Desktop/Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.21.47.png"; sourceTree = "<group>"; };
+		5C722B4E2B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.24.20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.24.20.png"; path = "../../../../../Desktop/Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.24.20.png"; sourceTree = "<group>"; };
+		5C722B4F2B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.22.12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.22.12.png"; path = "../../../../../Desktop/Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.22.12.png"; sourceTree = "<group>"; };
+		5C722B502B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.22.42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.22.42.png"; path = "../../../../../Desktop/Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.22.42.png"; sourceTree = "<group>"; };
+		5C722B512B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.24.43.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.24.43.png"; path = "../../../../../Desktop/Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.24.43.png"; sourceTree = "<group>"; };
 		AE5D85AC2AC8A221009680C6 /* MobileAcebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAcebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE5D85AF2AC8A221009680C6 /* MobileAcebookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAcebookApp.swift; sourceTree = "<group>"; };
 		AE5D85B32AC8A224009680C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,6 +133,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C722B4B2B9F222100029048 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				5C722B4C2B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.20.15.png */,
+				5C722B4D2B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.21.47.png */,
+				5C722B4F2B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.22.12.png */,
+				5C722B502B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.22.42.png */,
+				5C722B4E2B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.24.20.png */,
+				5C722B512B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.24.43.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		AE5D85A32AC8A221009680C6 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +169,7 @@
 		AE5D85AE2AC8A221009680C6 /* MobileAcebook */ = {
 			isa = PBXGroup;
 			children = (
+				5C722B4B2B9F222100029048 /* Screenshots */,
 				AE5D85E42AC9B060009680C6 /* Protocols */,
 				AE5D85DF2AC9AF83009680C6 /* Models */,
 				AE5D85DD2AC9AF72009680C6 /* Services */,
@@ -342,8 +368,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C722B522B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.20.15.png in Resources */,
+				5C722B542B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.24.20.png in Resources */,
 				AE5D85B72AC8A224009680C6 /* Preview Assets.xcassets in Resources */,
+				5C722B552B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.22.12.png in Resources */,
+				5C722B532B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.21.47.png in Resources */,
 				AE5D85B42AC8A224009680C6 /* Assets.xcassets in Resources */,
+				5C722B562B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.22.42.png in Resources */,
+				5C722B572B9F225800029048 /* Simulator Screenshot - iPhone 15 Pro - 2024-03-11 at 11.24.43.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
