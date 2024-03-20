@@ -33,3 +33,17 @@ Makers provided a number of resources on aspects of the app's development but we
 The project proved a challenging but enriching experience. Using SwiftUI and XCode came with a considerable learning curve but simulated the varied environments that can be expected in software development. Similarly, we gained valuable experience of integrating front- and backend services with RESTful APIs, considering UI design for mobile apps, and handling data management.
 
 # Screenshots
+<table>
+  <tr>
+    <td><img src="./MobileAcebook/screenshot_acebook_mobile_1_welcome.png" alt="Welcome view" width="300"></td>
+    <td><img src="./MobileAcebook/screenshot_acebook_mobile_2_sign-up.png" alt="Signup view" width="300"></td>
+  </tr>
+  <tr>
+    <td><img src="./MobileAcebook/screenshot_acebook_mobile_3_posts.png" alt="Feed view" width="300"></td>
+    <td><img src="./MobileAcebook/screenshot_acebook_mobile_4_user_page.png" alt="User view" width="300"></td>
+  </tr>
+   <tr>
+    <td><img src="./MobileAcebook/screenshot_acebook_mobile_5_new_post.png" alt="New post view" width="300"></td>
+    <td><img src="./MobileAcebook/screenshot_acebook_mobile_6_posts_new_post.png" alt="Feed with new post" width="300"></td>
+  </tr>
+</table>
