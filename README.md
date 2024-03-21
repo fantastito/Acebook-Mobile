@@ -1,7 +1,7 @@
 # Acebook Mobile
-Acebook Mobile was a one-week Makers Academy project, testing our ability to rapidly learn a new language and develop a SwiftUI app that connects to an [existing MERN backend](https://github.com/makersacademy/Mobile-Acebook-backend). Our team of five junior developers planned, designed and built the app over five days, deciding what to develop and in what way.
+Acebook Mobile was a one-week Makers Academy project, testing our ability to rapidly learn a new language and develop a SwiftUI app that connects to an [existing MERN backend](https://github.com/makersacademy/Mobile-Acebook-backend). Our team of five junior developers started with a [seed repo](https://github.com/makersacademy/swiftui-engineering-project), then planned, designed and built the app over five days, deciding what to develop and in what way.
 
-With Acebook Mobile, Users can:
+With Acebook Mobile, users can:
 - Sign up and log in securely
 - Add a profile photo that is stored in the cloud
 - View posts by other users
